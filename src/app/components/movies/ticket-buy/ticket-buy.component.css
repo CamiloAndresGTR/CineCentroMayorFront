@@ -1,0 +1,84 @@
+.container{
+    border-radius: 15px;
+    color: rgb(43, 38, 38);
+}
+
+.sala{
+    border: 2px solid white;
+    height: 70vh;
+}
+
+.silla{
+    height: 40px;
+    text-align: center;
+    align-content: center;
+    padding: 5px;
+    padding-top: 8px;
+    font-size: 20px;
+    color: rgb(48, 46, 46);
+    margin-left: 1px;
+    margin-right: 1px;
+    background-color: green;
+    border: rgba(99, 96, 96, 0.459) solid 1px;
+}
+
+.silla:hover{
+    cursor: pointer;
+    background-color: rgba(240,240,220,0.5);
+}
+
+.pantalla{
+    position: relative;
+    bottom: 0px;
+}
+
+.letra{
+    font-size: 14px;
+    color: white;
+}
+
+.corredor{
+    background: gray;
+    text-orientation: upright;
+}
+
+.pantalla{
+    background-color:greenyellow;
+    height: 20px;
+}
+
+.sillaMarcada{
+    background-color: blueviolet;
+    color: white;
+    border-radius: 4px;
+}
+
+.sillaOcupada{
+    background-color: rgba(128, 128, 128, 0.63);
+    color: rgba(0, 0, 0, 0.671);
+    border-radius: 4px;
+}
+
+.infoCompra{
+    border: 2px solid white;
+    height: 70vh;
+    background-color: white;
+}
+
+.texto-silla{
+    font-size: 8px;
+    color: white;
+    display: flow-root;
+}
+
+.btn-disponible{
+    background-color: green;
+}
+
+.btn-nodisponible{
+    background-color: rgba(128, 128, 128, 0.63);;
+}
+
+.btn-seleccionado{
+    background-color: blueviolet;
+}

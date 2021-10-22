@@ -1,11 +1,90 @@
-<div class="container mt-5">
+<div class="container mt-5 bg-white">
 
     <div class="row">
-        <div class="col-md-8 mx-auto" style="color:whitesmoke">
+        <div class="col-md-8 mx-auto text-center card-img-top mb-2 text-upper h3">
             Comprar Tickets
         </div>
-        <div class="col-md-8 mx-auto">
-            <img class="img-thumbnail w-50" src="./assets/images/UConstruction.jpg">
+        <hr>
+        <div class="col-md-3 infoCompra">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <label class="text-upper">DEAD POOL</label> <br>
+                    <img src="../../../../assets/images/movies/deadp.png" class="w-100">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 sala">
+
+            <div class="row mb-5">
+                <div class="col-md-12 mx-auto pantalla">
+                    <div class="col-12 text-center pantalla">
+                        <strong>PANTALLA</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" *ngFor="let fila of Sillas; let i = index">
+
+                <div class="col-12">
+                    <div class="row p-1">
+
+                        <span class="fa fa-chair col silla"
+                            [ngClass]="(silla.estado==0?'':(silla.estado==1?'sillaMarcada':'sillaOcupada'))"
+                            *ngFor="let silla of fila.sillas" (click)="callMarcarSilla($event,silla)">
+                            <small class="texto-silla"> {{fila.letra}} {{silla.indice}} </small>
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col mx-auto text-center">
+                    <span class="badge bg-primary">
+                        Cantidad: {{SillasSeleccionadas.length}}
+                    </span>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <div class="col-md-3 infoCompra">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <label class="text-upper">SALA 2</label>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="btn btn-sm btn-disponible w-100 mb-1">
+                        Disponibles
+                    </div> <br>
+                    <div class="btn btn-sm btn-nodisponible w-100 mb-1" >
+                        No disponibles
+                    </div><br>
+                    <div class="btn btn-sm btn-seleccionado w-100 mb-1">
+                        PMR
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-9">
+        </div>
+        <div class="col-3">
+            <div class="btn btn-sm btn-success w-100 mb-1">
+                COMPRAR 
+            </div>
         </div>
     </div>
 </div>
