@@ -15,29 +15,15 @@
             </tr>
         </thead>
         <tbody>
-            <tr style="color:whitesmoke">
-                <th scope="row">1</th>
-                <td>Los Juegos Del Hambre</td>
-                <td>Acción</td>
-                <td><button class="btn btn-success"> Editar</button> / <button class="btn btn-danger"> Eliminar</button></td>
-            </tr>
-            <tr style="color:whitesmoke">
-                <th scope="row">2</th>
-                <td>Los Vengadores</td>
-                <td>Acción</td>
-                <td><button class="btn btn-success"> Editar</button> / <button class="btn btn-danger"> Eliminar</button></td>
-            </tr>
-            <tr style="color:whitesmoke">
-                <th scope="row">3</th>
-                <td>La casa del Terror</td>
-                <td>Terror</td>
-                <td><button class="btn btn-success"> Editar</button> / <button class="btn btn-danger"> Eliminar</button></td>
-            </tr>
-            <tr style="color:whitesmoke">
-                <th scope="row">3</th>
-                <td>Harry Potter</td>
-                <td>Fantasía</td>
-                <td><button class="btn btn-success"> Editar</button> / <button class="btn btn-danger"> Eliminar</button></td>
+            <tr style="color:whitesmoke" *ngFor="let pelicula of peliculas;">
+                <th scope="row">{{pelicula.id}}</th>
+                <td>
+                    <img src="{{pelicula.urlImagen}}" height="40">
+                </td>
+                <td>{{pelicula.titulo}}</td>
+                <td><button class="btn btn-success btn-sm" (click)="editMovi(pelicula)"> Editar</button> /
+                    <button class="btn btn-danger btn-sm" (click)="deleteMovi(pelicula)" > Eliminar</button>
+                </td>
             </tr>
         </tbody>
     </table>
