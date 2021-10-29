@@ -27,7 +27,7 @@ import { CreateGenderComponent } from './components/movies/create-gender/create-
 import { EditGenderComponent } from './components/movies/edit-gender/edit-gender.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: FindMovieComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'edit-user', component: EditUserComponent },
