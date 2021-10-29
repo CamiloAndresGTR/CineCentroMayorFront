@@ -4,17 +4,14 @@
       <div class="col-md-12 text-center">
         <h2>Buscar Película</h2>
       </div>
-      <form class="d-flex">
         <input
           class="form-control me-2"
-          (keyup)='changeFilters()'
-          type="search"
-          placeholder="Buscar Película"
-          aria-label="Search"
           value=""
+          (keyup)='changeFilters()'
+          placeholder="Buscar Película"
+          matInput
+          [(ngModel)]="filters"
         />
-        <button class="btn btn-outline-info" type="submit">Buscar</button>
-      </form>
       <div class="row" >
         <div class="card mb-3 col-6 mt-5" style="max-width: 540px" *ngFor="let pelicula of peliculas">
           <div class="row g-0" >
@@ -27,7 +24,7 @@
             </div>
             <div class="col-md-8">
               <div class="card-body">
-                <h5 class="card-title">{{pelicula.titulo}}</h5>
+                <h2>{{pelicula.titulo}}</h2>
                 <p class="card-text">
                     <small class="text-muted">Idioma: {{pelicula.idioma}} --- Duración: {{pelicula.duracion}}</small>
                 </p>
