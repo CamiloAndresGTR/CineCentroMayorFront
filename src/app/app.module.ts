@@ -31,6 +31,7 @@ import { CreateGenderComponent } from './components/movies/create-gender/create-
 import { EditGenderComponent } from './components/movies/edit-gender/edit-gender.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { UsersComponent } from './components/users/users.component';
 
 
 
@@ -61,7 +62,8 @@ import { FormsModule } from '@angular/forms';
     EditUserTypeComponent,
     GendersComponent,
     CreateGenderComponent,
-    EditGenderComponent
+    EditGenderComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
