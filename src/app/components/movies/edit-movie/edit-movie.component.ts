@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { pelicula, peliculaDao, peliculasApis } from '../../../config/config.service.peliculas'
 import { genero, generoApis } from '../../../config/config.service.genero'
 import { HttpClient } from '@angular/common/http';
+import { Router} from '@angular/router';
 
 @Component({
   selector: 'app-edit-movie',
@@ -16,7 +17,7 @@ export class EditMovieComponent implements OnInit {
   public idiomas:Array<string>;
   public generos:Array<genero>;
 
-  constructor(private httpClient: HttpClient) { 
+  constructor(private httpClient: HttpClient, private router: Router) { 
     this.peliculaNueva = new peliculaDao();
     this.generoApisDao = new generoApis(httpClient);
     this.peliculasapis = new peliculasApis(httpClient);
@@ -31,6 +32,13 @@ export class EditMovieComponent implements OnInit {
       this.generos = data;
     })
 
+    let urlTree = this.router.parseUrl(this.router.url);
+    let id = parseInt(urlTree.queryParams['Id']);
+    if(!isNaN(id)){
+      this.peliculasapis.getId(id).subscribe((data) => {
+        this.peliculaNueva =  data;
+      });
+    }
   }
   ngOnInit(): void {
     

@@ -46,7 +46,7 @@ export class peliculasApis {
   }
 
   public getId(Id: number) {
-    return this.httpClient.get(this.url + `/${Id}`);
+    return this.httpClient.get<pelicula>(this.url + `/${Id}`);
   }
 
   public deleteId(Id: number) {

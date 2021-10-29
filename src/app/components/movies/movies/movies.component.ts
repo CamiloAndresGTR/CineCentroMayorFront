@@ -33,7 +33,7 @@ export class MoviesComponent implements OnInit {
   }
 
   editMovi(pelicula:pelicula):void{
-    location.href = `/edit-movie/Id=${pelicula.id}`;
+    location.href = `/edit-movie?Id=${pelicula.id}`;
   }
 
 }
