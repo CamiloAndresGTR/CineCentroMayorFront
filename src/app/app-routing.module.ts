@@ -25,9 +25,11 @@ import { EditUserTypeComponent } from './components/auth/user/edit-user-type/edi
 import { GendersComponent } from './components/movies/genders/genders.component';
 import { CreateGenderComponent } from './components/movies/create-gender/create-gender.component';
 import { EditGenderComponent } from './components/movies/edit-gender/edit-gender.component';
+import { UsersComponent } from './components/users/users.component'
 
 const routes: Routes = [
   { path: '', component: FindMovieComponent },
+  { path: 'users', component: UsersComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'edit-user', component: EditUserComponent },

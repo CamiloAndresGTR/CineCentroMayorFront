@@ -8,6 +8,7 @@ export interface usuario {
   tipoId:string;
   nombres:string;
   apellidos:string;
+  numeroId:string;
   email:string;
   genero_id:number;
   nombreUsuario:string;
