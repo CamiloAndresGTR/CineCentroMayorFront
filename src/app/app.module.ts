@@ -29,9 +29,8 @@ import { EditUserTypeComponent } from './components/auth/user/edit-user-type/edi
 import { GendersComponent } from './components/movies/genders/genders.component';
 import { CreateGenderComponent } from './components/movies/create-gender/create-gender.component';
 import { EditGenderComponent } from './components/movies/edit-gender/edit-gender.component';
-import { MatFormFieldModule } from '@angular/material/form-field';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -68,10 +67,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    MatFormFieldModule,
     BrowserAnimationsModule,
-    FormsModule,
-    ReactiveFormsModule
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
